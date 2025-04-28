@@ -1,3 +1,5 @@
+package am.aua.core;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 

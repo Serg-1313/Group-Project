@@ -1,3 +1,5 @@
+package am.aua.core;
+
 public class Area {
     private int id;
     private int number;

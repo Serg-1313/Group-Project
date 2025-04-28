@@ -1,2 +1,4 @@
-public class Settlement extends Building{
+package am.aua.core;
+
+public class Settlement extends Building {
 }
