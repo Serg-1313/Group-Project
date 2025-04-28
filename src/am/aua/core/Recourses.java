@@ -1,4 +1,5 @@
 package am.aua.core;
 
-public enum Recources {
+public enum Recourses {
+    BRICK,WOOL,ORE,LUMBER,GRAIN
 }
