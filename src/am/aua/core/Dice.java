@@ -1,5 +1,4 @@
 package am.aua.core;
 
-public class Card {
-
+public class Dice {
 }
