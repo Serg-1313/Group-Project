@@ -1,5 +1,8 @@
 package am.aua.core;
 
-public class Bank {
-    private Card[] cards = new Card[120];
+public class Bank extends Inventory {
+    public Bank() {
+        super();
+    }
+
 }
