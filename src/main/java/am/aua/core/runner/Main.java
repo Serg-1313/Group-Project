@@ -7,10 +7,11 @@ import am.aua.core.board.Area;
 import am.aua.core.board.Board;
 import am.aua.core.board.Location;
 import am.aua.core.buildings.House;
+import am.aua.exceptions.ZeroResourceException;
 import am.aua.utils.PrintHelper;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ZeroResourceException {
 //        Board board = new Board();
 //        Location location = new Location();
 //        Player player = new Player(1, "Armen");

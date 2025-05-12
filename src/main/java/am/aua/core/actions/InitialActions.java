@@ -4,6 +4,8 @@ import am.aua.core.Player;
 import am.aua.core.StateManager;
 import am.aua.core.board.Board;
 import am.aua.core.board.Location;
+import am.aua.exceptions.ZeroResourceException;
+
 import java.util.Scanner;
 
 public class InitialActions {
@@ -25,7 +27,7 @@ public class InitialActions {
         }
     }
 
-    public void startRound(Scanner scanner, Player[] players, StateManager state, RoundActions actions) {
+    public void startRound(Scanner scanner, Player[] players, StateManager state, RoundActions actions) throws ZeroResourceException {
         for (Player player : players) {
             actions.playerTurn(scanner, state, player);
         }

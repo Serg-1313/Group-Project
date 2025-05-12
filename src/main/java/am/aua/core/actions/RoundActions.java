@@ -24,7 +24,7 @@ public class RoundActions {
             moveRobber(player, state, scanner);
             System.out.println(player.getName() + " continue the game");
         } else {
-            collectCardsFromBank();
+            collectCardsFromBank(state,diceNumber);
         }
 
         String[] actionMenu = new String[] {"Skip the turn!", "Open shop", "Bank Trade", "Use Special"};

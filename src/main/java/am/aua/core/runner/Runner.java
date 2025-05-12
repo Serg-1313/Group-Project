@@ -7,11 +7,12 @@ import am.aua.core.actions.InitialActions;
 import am.aua.core.actions.RoundActions;
 import am.aua.core.board.Board;
 import am.aua.core.board.Location;
+import am.aua.exceptions.ZeroResourceException;
 
 import java.util.Scanner;
 
 public class Runner {
-    public void runTerminal() {
+    public void runTerminal() throws ZeroResourceException {
         Scanner scanner = new Scanner(System.in);
         Builder builder = new Builder();
         InitialActions initialActions = new InitialActions();
