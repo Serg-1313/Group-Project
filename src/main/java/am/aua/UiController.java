@@ -3,7 +3,7 @@ package am.aua;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class UiController {
     @FXML
     private Label welcomeText;
 
