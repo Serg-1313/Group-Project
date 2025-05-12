@@ -1,4 +1,4 @@
-package am.aua.exception;
+package am.aua.exceptions;
 
 public class NotEnoughResourcesException extends Exception {
     public NotEnoughResourcesException() {

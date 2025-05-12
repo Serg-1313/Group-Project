@@ -1,4 +1,4 @@
-package am.aua.core.Actions;
+package am.aua.core.actions;
 
 public class SpecialActions {
     public static void callKnight() {}

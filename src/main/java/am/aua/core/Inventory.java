@@ -2,8 +2,10 @@ package am.aua.core;
 
 import am.aua.constants.DevelopmentCards;
 import am.aua.constants.Resources;
-import am.aua.exception.ZeroResourceException;
+import am.aua.exceptions.ZeroResourceException;
+import am.aua.exceptions.DevelopmentCardIsOverException;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public abstract class Inventory {
@@ -31,10 +33,37 @@ public abstract class Inventory {
         inventory.resourceCards.put(resource, inventory.resourceCards.get(resource) + 1);
     }
 
-    public void giveDevelopmentCard(DevelopmentCards developmentCard, Inventory inventory) throws ZeroResourceException {
-        if(this.developmentCards.get(developmentCard) == 0) throw new ZeroResourceException(developmentCards.toString());
+    public void giveDevelopmentCard(DevelopmentCards developmentCard, Inventory inventory) throws DevelopmentCardIsOverException {
+        if(this.developmentCards.get(developmentCard) == 0) throw new DevelopmentCardIsOverException(developmentCards.toString());
 
         this.developmentCards.put(developmentCard, inventory.developmentCards.get(developmentCard) - 1);
         inventory.developmentCards.put(developmentCard, inventory.developmentCards.get(developmentCard) + 1);
+    }
+
+    public int getResourceCardsCount() {
+         int sum = 0;
+         for(Resources key : this.resourceCards.keySet()) {
+             sum += this.resourceCards.get(key);
+         }
+
+         return sum;
+    }
+
+    public Resources[] getResourceCardsTypes() {
+        ArrayList<Resources> resources = new ArrayList<>();
+
+        for(Resources key : this.resourceCards.keySet()) {
+            if(this.resourceCards.get(key) != 0) resources.add(key);
+        }
+
+        return resources.toArray(new Resources[0]);
+    }
+
+    public HashMap<Resources, Integer> getResourceCards() {
+        return resourceCards;
+    }
+
+    public HashMap<DevelopmentCards, Integer> getDevelopmentCards() {
+        return developmentCards;
     }
 }

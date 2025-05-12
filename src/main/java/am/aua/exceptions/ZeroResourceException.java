@@ -1,9 +1,11 @@
-package am.aua.exception;
-
-import am.aua.constants.Resources;
+package am.aua.exceptions;
 
 public class ZeroResourceException extends Exception {
+    public ZeroResourceException() {
+    super("Zero resource found!");
+  }
+
     public ZeroResourceException(String resource) {
-        super("Not enough " + resource + " in bank!");
+        super("There is no " + resource + " available now!");
     }
 }
